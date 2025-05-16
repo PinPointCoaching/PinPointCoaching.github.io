@@ -66,6 +66,7 @@ h1 {
 .fade-in {
   color: var(--clr-light);
   opacity: 0;
+  letter-spacing: .2em;
   animation: fadeInQuick .8s ease-out forwards;
   -webkit-animation: fadeInQuick .8s ease-out .3s forwards;
 }
@@ -80,8 +81,10 @@ h1 {
     left: -100vw;
     animation: slide 0.5s forwards;
     animation-delay: .5s;
-    font-size: 1.4em;
+    font-size: 2em;
     color: var(--clr-accent2);
+    font-family: 'Raleway';
+    font-style: italic;
 }
 
 @keyframes slide {
@@ -130,7 +133,7 @@ h1 {
 
 
 .lines::before{ 
-  top:-.24em;
+  top:-.4em;
   width:65%; 
   --cut:30%;  
   /* clip-path:polygon(var(--cut) 0,100% 0,100% 100%,0 100%); */
@@ -138,7 +141,7 @@ h1 {
 
 
 .lines::after {
-  top: .24em;
+  top: .5em;
   width:120%; 
   --cut:18%;  
   /* clip-path:polygon(var(--cut) 0,100% 0,100% 100%,0 100%); */
@@ -580,9 +583,17 @@ textarea {
     color: var(--clr-dark);
   }
 
-  .color-hero-text {
-    color: var(--clr-accent);
-  }
+.fade-in {
+  color: var(--clr-dark);
+}
+
+.slide-in {
+  color: var(--clr-accent);
+}
+
+.lines {
+  background-color: var(--clr-accent);
+}
 
   .hero button {
     background-color: var(--clr-primary);
