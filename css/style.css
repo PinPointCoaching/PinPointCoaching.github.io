@@ -10,7 +10,7 @@ body {
 h1 {
     font-family: var(--ff-heading);
     line-height: 1.2;
-   font-size: 7rem;
+   /* font-size: 7rem; */
    text-align: center;
    color: var(--clr-primary);
 }
@@ -26,16 +26,14 @@ h1 {
   align-items:flex-start;         
   padding:var(--space-5) var(--space-4);
   position:relative;
-  align-items:flex-start;
-  gap: 6rem;
+  /* gap: 6rem; */
 }
 
 
 .hero-title {
-    font-size:clamp(3rem,6vw,6rem);
+  font-size:clamp(3rem,6vw,6rem);
   line-height:1.05;
   text-align:left;
-  margin:0 0 1.25rem;             
   width:auto; 
 }
 
@@ -60,7 +58,7 @@ h1 {
   -ms-transition: background 0.2s ease;
   -o-transition: background 0.2s ease;
   align-self:center;                    
-  margin-top:1.75rem;                   
+  /* margin-top:1.75rem;                    */
 }
 
 .fade-in {
@@ -81,10 +79,11 @@ h1 {
     left: -100vw;
     animation: slide 0.5s forwards;
     animation-delay: .5s;
-    font-size: 2em;
+    font-size: clamp(4rem, 10vw, 10rem);
     color: var(--clr-accent2);
     font-family: 'Raleway';
     font-style: italic;
+    font-variant-ligatures: none;
 }
 
 @keyframes slide {
@@ -579,12 +578,29 @@ textarea {
   }
   .hero h1 {
     padding-inline: 2rem;
-    font-size: 4rem;
     color: var(--clr-dark);
   }
 
+  .hero-title {
+    text-align: center;
+    align-self: center;
+  }
+
+  .slide-in {
+    position: static;
+    display: inline-block;
+    text-align: center;
+    left: auto;
+}
+
+  
+
 .fade-in {
+  animation: none !important;
+  opacity: 1;
   color: var(--clr-dark);
+  letter-spacing: normal;
+  -webkit-animation: none !important;
 }
 
 .slide-in {
@@ -592,7 +608,7 @@ textarea {
 }
 
 .lines {
-  background-color: var(--clr-accent);
+  display: none;
 }
 
   .hero button {
