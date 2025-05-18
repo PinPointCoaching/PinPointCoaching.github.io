@@ -22,23 +22,35 @@ heroContactBtn.addEventListener("click", () => {
 
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
+const submitButton = form.querySelector('button[type="submit"]');
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   const data = new FormData(form);
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  });
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
 
-  if (response.ok) {
-    status.textContent = "Thanks! Your message was sent successfully.";
-    form.reset();
-  } else {
-    status.textContent = "Oops! There was a problem submitting your form.";
+    if (response.ok) {
+      status.textContent =
+        "Thanks! You will receive an email from Clayt on how to get on the road to being effective";
+      submitButton.disabled = true;
+      submitButton.style.opacity = "0.6";
+      submitButton.style.background = "grey";
+      submitButton.style.cursor = "not-allowed";
+      submitButton.textContent = "Submitted";
+      submitButton.classList.add("no-hover");
+      form.reset();
+    } else {
+      status.textContent = "Oops! There was a problem submitting your form.";
+    }
+  } catch (error) {
+    status.textContent = "Oops! Network error. Please try again later.";
   }
 
   status.style.opacity = 1;
@@ -86,6 +98,4 @@ document
   .querySelector(".prev-arrow")
   .addEventListener("click", showPrevTestimonial);
 
-setInterval(showNextTestimonial, 10000);
-
-
+// setInterval(showNextTestimonial, 10000);
