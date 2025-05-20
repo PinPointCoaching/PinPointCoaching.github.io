@@ -84,11 +84,14 @@ h1 {
     font-family: 'Raleway';
     font-style: italic;
     font-variant-ligatures: none;
+    padding-right: .45rem;
 }
 
 @keyframes slide {
     100% { left: 8rem; }
 }
+
+
 
 
 .lines{
