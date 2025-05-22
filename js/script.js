@@ -56,7 +56,7 @@ form.addEventListener("submit", async function (e) {
   status.style.opacity = 1;
   setTimeout(() => {
     status.style.opacity = 0;
-  }, 5000);
+  }, 100000);
 });
 
 let currentTestimonial = 0;

@@ -588,6 +588,7 @@ textarea {
     .hero {
     background: none;
     color: var(--clr-dark);
+    min-height: unset;
   }
   .hero h1 {
     padding-inline: 2rem;
@@ -600,10 +601,37 @@ textarea {
   }
 
   .slide-in {
-    position: static;
+    position: relative;
+    left: 0;
+    transform: translateX(-100vw);
+    animation: slideInMobile .2s ease-out .5s forwards;
     display: inline-block;
     text-align: center;
     left: auto;
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+    -webkit-animation: slideInMobile .2s ease-out .5s forwards;
+}
+
+@keyframes slideInMobile {
+  from {
+    transform: translateX(-100vw)  ;
+    opacity: 0;
+    -webkit-transform: translateX(-100vw)  ;
+    -moz-transform: translateX(-100vw)  ;
+    -ms-transform: translateX(-100vw)  ;
+    -o-transform: translateX(-100vw)  ;
+}
+  to{
+    transform: translateX(0)  ;
+    opacity: 1;
+    -webkit-transform: translateX(0)  ;
+    -moz-transform: translateX(0)  ;
+    -ms-transform: translateX(0)  ;
+    -o-transform: translateX(0)  ;
+}
 }
 
   
