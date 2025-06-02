@@ -20,6 +20,25 @@ heroContactBtn.addEventListener("click", () => {
   contactForm.scrollIntoView({ behavior: "smooth" });
 });
 
+const personalBtn = document.getElementById("personalBtn");
+const businessBtn = document.getElementById("businessBtn");
+
+personalBtn.addEventListener("click", () => {
+  personalBtn.classList.add("active");
+  businessBtn.classList.remove("active");
+  personalPanel.classList.remove("hidden");
+  businessPanel.classList.add("hidden");
+});
+
+businessBtn.addEventListener("click", () => {
+  businessBtn.classList.add("active");
+  personalBtn.classList.remove("active");
+  businessPanel.classList.remove("hidden");
+  personalPanel.classList.add("hidden");
+
+});
+
+
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const submitButton = form.querySelector('button[type="submit"]');
