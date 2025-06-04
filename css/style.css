@@ -323,8 +323,6 @@ h1 {
   width: 100%;
  
   aspect-ratio: 16 / 9;
-  background-color: lightgrey;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   font-size: 1.2rem;
 }
 
@@ -333,6 +331,10 @@ h1 {
   height: 100%;
   border: none;
   border-radius: 0.5rem;
+}
+
+.video-embed p {
+  background-color: none;
 }
 
 .video-text {
@@ -619,11 +621,22 @@ textarea {
 
 
 
+@media (max-width: 1300px) and (min-width: 901px) {
+  .video {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .video-text,
+  .video-embed {
+    width: 100%;
+  }
+}
 
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   
     .hero {
     background: none;
@@ -765,4 +778,5 @@ textarea {
     display: none;
   }
 }
+
 
