@@ -306,6 +306,10 @@ h1 {
     gap: 5rem;
 }
 
+.video-text {
+  flex: 1;
+}
+
 .video-text h2 {
     margin-bottom: .25rem;
     margin-top: 0px;
@@ -318,20 +322,21 @@ h1 {
 .video-text img {
     margin-bottom: 0;
 }
+
 .video-embed {
-  position: relative;
+  flex: 2;
+  max-width: 750px; /* or whatever max you want */
   width: 100%;
- 
-  aspect-ratio: 16 / 9;
-  font-size: 1.2rem;
 }
 
 .video-embed iframe {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   border: none;
-  border-radius: 0.5rem;
 }
+
+
+
 
 .video-embed p {
   background-color: none;
