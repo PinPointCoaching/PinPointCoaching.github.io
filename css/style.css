@@ -244,6 +244,13 @@ h1 {
   pointer-events: none;
 }
 
+.personal-copy , .business-copy {
+  border-left: 4px solid var(--clr-primary);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
 
 .skills {
   padding-block: var(--space-5);
@@ -630,6 +637,7 @@ textarea {
   .video {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
   }
 
   .video-text,
@@ -736,6 +744,7 @@ textarea {
   .video {
     flex-direction: column;
     padding: 2rem 1rem;
+    align-items: center;
   }
 
 .bio h1 {
