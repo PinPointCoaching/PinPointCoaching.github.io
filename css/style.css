@@ -636,13 +636,15 @@ textarea {
 @media (max-width: 1300px) and (min-width: 901px) {
   .video {
     flex-direction: column;
-    gap: 2rem;
+    padding: 2rem 1rem;
     align-items: center;
   }
 
   .video-text,
   .video-embed {
     width: 100%;
+    max-width: 750px;
+    margin-inline: auto;
   }
 }
 
