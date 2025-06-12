@@ -371,7 +371,6 @@ h1 {
 .bio-text h2 {
     color: var(--clr-dark);
     font-size: 3rem;
-    min-height: calc(2 * 3rem);
     padding: 0;
     text-align: center;
     line-height: 1; 
@@ -421,21 +420,6 @@ h1 {
   bottom: 0;
   width: 1px;
   background: var(--clr-dark);
-}
-
-.down-link {
-    margin-left: 50rem;
-    margin-right: 5rem;
-    max-width: 20rem;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 5rem;
-    line-height: 1;
-}
-
-.down-link img {
-    max-width: 5rem;
-    height: auto;
 }
 
 
