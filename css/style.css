@@ -90,7 +90,7 @@ h1 {
 }
 
 @keyframes slide {
-    100% { left: 25rem; }
+    100% { left: 4em; }
 }
 
 
@@ -118,7 +118,7 @@ h1 {
 @keyframes lineSlide {
   0% { opacity: 0; transform:translateX(500%); -webkit-transform:translateX(500%); -moz-transform:translateX(500%); -ms-transform:translateX(500%); -o-transform:translateX(500%); }
   35% {opacity: .01;}
-  100% { opacity: 1; transform: translateX(-13rem); }
+  100% { opacity: 1; transform: translateX(-2em); }
 }
 
 
