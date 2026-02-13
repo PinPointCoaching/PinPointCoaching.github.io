@@ -5,7 +5,7 @@ body {
     font-family: var(--ff-body);
     color: var(--clr-dark);
     background: var(--clr-light);
-    line-height: 1.6;
+
 }
 h1 {
     font-family: var(--ff-heading);
@@ -31,12 +31,6 @@ h1 {
 }
 
 
-.hero-title {
-  font-size:clamp(3rem,6vw,6rem);
-  line-height:1.05;
-  text-align:left;
-  width:auto; 
-}
 
 
 
@@ -63,12 +57,17 @@ h1 {
   /* margin-top:1.75rem;                    */
 }
 
-.fade-in {
-  color: var(--clr-dark);
-  opacity: 0;
-  letter-spacing: .2em;
-  animation: fadeInQuick .8s ease-out forwards;
-  -webkit-animation: fadeInQuick .8s ease-out .3s forwards;
+.be-more {
+    font-family: var(--ff-heading);
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 900;
+    line-height: 1.05;
+    width: auto;
+    color: var(--clr-dark);
+    opacity: 0;
+    letter-spacing: .2em;
+    animation: fadeInQuick .8s ease-out forwards;
+    -webkit-animation: fadeInQuick .8s ease-out .3s forwards;
 }
 
 @keyframes fadeInQuick {
@@ -76,9 +75,9 @@ h1 {
   to { opacity: 1;}
 }
 
-.slide-in {
-    position: absolute;
-    left: -100vw;
+.effective {
+    /*position: absolute;*/
+    /*left: -100vw;*/
     animation: slide 0.5s forwards;
     animation-delay: .5s;
     font-size: clamp(4rem, 10vw, 10rem);
@@ -86,70 +85,31 @@ h1 {
     font-family: 'Raleway';
     font-style: italic;
     font-variant-ligatures: none;
-    padding-right: .45rem;
+    margin-right: 150rem;
 }
 
 @keyframes slide {
-    100% { left: 4em; }
+    100% { margin-right: 0; }
+}
+
+.hero-line-2 {
+    display: flex;
 }
 
 
 
 
-.lines{
- width:6rem;
- height:6px;
-  background:var(--clr-accent);
-  display:inline-block;
-  margin-right:1rem;
-  position:relative;
-  transform: translateX(500%);
-  -webkit-transform: translateX(500%);
-  -moz-transform: translateX(500%);
-  -ms-transform: translateX(500%);
-  -o-transform: translateX(500%);
-  animation: lineSlide 1s ease-out forwards;
-  -webkit-animation: lineSlide 1s ease-out forwards;
-  
-}
 
 
 
-@keyframes lineSlide {
-  0% { opacity: 0; transform:translateX(500%); -webkit-transform:translateX(500%); -moz-transform:translateX(500%); -ms-transform:translateX(500%); -o-transform:translateX(500%); }
-  35% {opacity: .01;}
-  100% { opacity: 1; transform: translateX(-2em); }
-}
-
-
-.lines::before,
-.lines::after{
-  content:"";
-  position:absolute;
-
- 
-  right:0;
-
-  height:inherit;
-  background:inherit;
-}
+/*@keyframes lineSlide {*/
+/*  0% { opacity: 0; transform:translateX(500%); -webkit-transform:translateX(500%); -moz-transform:translateX(500%); -ms-transform:translateX(500%); -o-transform:translateX(500%); }*/
+/*  35% {opacity: .01;}*/
+/*  100% { opacity: 1; transform: translateX(-2em); }*/
+/*}*/
 
 
 
-.lines::before{ 
-  top:-.4em;
-  width:65%; 
-  --cut:30%;  
-  /* clip-path:polygon(var(--cut) 0,100% 0,100% 100%,0 100%); */
-}
-
-
-.lines::after {
-  top: .5em;
-  width:120%; 
-  --cut:18%;  
-  /* clip-path:polygon(var(--cut) 0,100% 0,100% 100%,0 100%); */
-}
 
 
 
@@ -653,43 +613,9 @@ textarea {
     align-self: center;
   }
 
-  .slide-in {
-    position: relative;
-    left: 0;
-    transform: translateX(-100vw);
-    animation: slideInMobile .2s ease-out .5s forwards;
-    display: inline-block;
-    text-align: center;
-    left: auto;
-    -webkit-transform: translateX(-100vw);
-    -moz-transform: translateX(-100vw);
-    -ms-transform: translateX(-100vw);
-    -o-transform: translateX(-100vw);
-    -webkit-animation: slideInMobile .2s ease-out .5s forwards;
-}
-
-@keyframes slideInMobile {
-  from {
-    transform: translateX(-100vw)  ;
-    opacity: 0;
-    -webkit-transform: translateX(-100vw)  ;
-    -moz-transform: translateX(-100vw)  ;
-    -ms-transform: translateX(-100vw)  ;
-    -o-transform: translateX(-100vw)  ;
-}
-  to{
-    transform: translateX(0)  ;
-    opacity: 1;
-    -webkit-transform: translateX(0)  ;
-    -moz-transform: translateX(0)  ;
-    -ms-transform: translateX(0)  ;
-    -o-transform: translateX(0)  ;
-}
-}
-
   
 
-.fade-in {
+.be-more {
   animation: none !important;
   opacity: 1;
   color: var(--clr-dark);
@@ -697,7 +623,7 @@ textarea {
   -webkit-animation: none !important;
 }
 
-.slide-in {
+.effective {
   color: var(--clr-accent);
 }
 
